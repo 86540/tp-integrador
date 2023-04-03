@@ -14,7 +14,7 @@ public class Main {
         //System.out.println("Este es nuestro string path:" + resultados);
         //System.out.println("Este es nuestro string path:" + pronostico);
 
-        //       lectura de los resultados de los partidos
+        //      lectura de los resultados de los partidos
         Path pathResultados = Paths.get("resultados.csv");
 		List<String> br = null;
 
