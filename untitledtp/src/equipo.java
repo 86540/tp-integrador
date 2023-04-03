@@ -1,10 +1,13 @@
-public class equipo extends Object{
+public class Equipo extends Object{
     //public equipo (String nombre,int id, String descripcion){
     //}
 
     private String nombre;
     private int id;
     private  String descripcion;
+
+    public Equipo(String string, int i) {
+    }
 
     public String getNombre() {return nombre;}
     
@@ -16,6 +19,6 @@ public class equipo extends Object{
     
     public String getid(String id) {return id;}
 
-    public void setid(String id) {this.id=id;}
+    public void setid(int id) {this.id=id;}
 }
 

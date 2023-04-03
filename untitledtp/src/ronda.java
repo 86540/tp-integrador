@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-public class ronda {
-    partido[] partidoss = new partido[4];
+public class Ronda {
+    Partido[] partidoss = new Partido[4];
 
-    public ArrayList<partido> partidos = new ArrayList<partido>();
+    public ArrayList<Partido> partidos = new ArrayList<Partido>();
     public void ListarGanadores()
     {
         for (int i = 0; i < partidos.size() ; i++) {
