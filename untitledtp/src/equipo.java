@@ -9,6 +9,7 @@ public class equipo {
 
     public String getNombre() {
         return nombre;
+        //
     }
 
 }
