@@ -1,6 +1,10 @@
 import java.util.ArrayList;
+//<<<<<<< HEAD
 public class Ronda {
     Partido[] partidoss = new Partido[4];
+//=======
+public class ronda{
+//>>>>>>> upstream/main
 
     public ArrayList<Partido> partidos = new ArrayList<Partido>();
     public void ListarGanadores()
@@ -10,4 +14,5 @@ public class Ronda {
         }
         System.out.println("--------------------------------");
     }
+}
 }

@@ -23,7 +23,7 @@ public class Partido extends Object{
     public <Int> void setGoles2(Int goles2){this.goles2=(int) goles2;}
 
     public String getGanador() {
-        String empate ="sin ganador";
+        String empate ="empate";
         if (goles1 > goles2) {
            return equipo1.getNombre();
 
