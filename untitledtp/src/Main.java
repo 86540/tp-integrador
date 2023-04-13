@@ -8,11 +8,11 @@ import java.io.BufferedReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //String pronostico = "C:\\Users\\brian\\OneDrive\\Escritorio\\escuela\\Argentina Programa\\tp integrador\\untitledtp\\pronostico.csv";
-        //String resultados = "C:\\Users\\brian\\OneDrive\\Escritorio\\escuela\\Argentina Programa\\tp integrador\\untitledtp\\resultados.csv";
+        String pronostico = "C:\\Users\\brian\\OneDrive\\Escritorio\\escuela\\Argentina Programa\\tp integrador\\untitledtp\\pronostico.csv";
+        String resultados = "C:\\Users\\brian\\OneDrive\\Escritorio\\escuela\\Argentina Programa\\tp integrador\\untitledtp\\resultados.csv";
       
-        //System.out.println("Este es nuestro string path:" + resultados);
-        //System.out.println("Este es nuestro string path:" + pronostico);
+        System.out.println("Este es nuestro string path:" + resultados);
+        System.out.println("Este es nuestro string path:" + pronostico);
 
         //      lectura de los resultados de los partidos
         Path pathResultados = Paths.get("resultados.csv");
@@ -35,8 +35,10 @@ public class Main {
                     nombresequipo[i+1] = posicion[2];
                     golesanotados[i+1] = Integer.parseInt(posicion[3]);
                     i++;equiposcant=equiposcant+2;
-              }
-            }
+                    }
+                }
+            
+            
 
               //formador de equipos
               Equipo equipos[]=new Equipo[equiposcant];
@@ -53,7 +55,7 @@ public class Main {
                   ronda1.partidos.add(partidos[i]);
                   j=j+2;
               }
-
+            
              // lectura del pronostico de los partidos
 
             String lineapro;
@@ -74,22 +76,26 @@ public class Main {
                 ronda1.ListarGanadores();
 
                 int puntaje=0;
-
-     for(int i=0;i<golesanotados.length;i++){
-                    if (golesanotados[0]>golesanotados[1]&&resultadospro[0].equals("x")) {puntaje++;}
-                    else if(golesanotados[1]>golesanotados[0] && resultadospro[2].equals("x")){puntaje++;}
-                    else if(golesanotados[0]==golesanotados[1] && resultadospro[1].equals("x")){puntaje++;}
-                    else if(golesanotados[2]>golesanotados[3] &&  resultadospro[3].equals("x")){puntaje++;}
-                    else if(golesanotados[3]>golesanotados[2] && resultadospro[5].equals("x")){puntaje++;}
-                    else if(golesanotados[2]==golesanotados[3] && resultadospro[4].equals("x")){puntaje++;}
-     }
-                System.out.println("sumaste :"+puntaje+" puntos con tu pronostico ");
             
-        } catch (NumberFormatException e) {
+          
+            for(int i=0;i<golesanotados.length;i++){
+                if (golesanotados[0]>golesanotados[1]&&resultadospro[0].equals("x")) {puntaje++;}
+                else if(golesanotados[1]>golesanotados[0] && resultadospro[2].equals("x")){puntaje++;}
+                else if(golesanotados[0]==golesanotados[1] && resultadospro[1].equals("x")){puntaje++;}
+                else if(golesanotados[2]>golesanotados[3] &&  resultadospro[3].equals("x")){puntaje++;}
+                else if(golesanotados[3]>golesanotados[2] && resultadospro[5].equals("x")){puntaje++;}
+                else if(golesanotados[2]==golesanotados[3] && resultadospro[4].equals("x")){puntaje++;}
+            }
+    
+            System.out.println("sumaste :"+puntaje+" puntos con tu pronostico ");
+          
+            }catch (NumberFormatException e) {
             System.out.println("problemas en pronosticos");
             e.printStackTrace();
+         
+            }
         }
+    } finally {System.out.println("finally");}
     }
-}"Finally"
-          }
-    }
+}
+
