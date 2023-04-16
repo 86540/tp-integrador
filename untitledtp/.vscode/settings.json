@@ -1,0 +1,7 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.referencedLibraries": [
+        "library/**/*.jar",
+        "/home/username/lib/foo.jar"
+    ]
+}
